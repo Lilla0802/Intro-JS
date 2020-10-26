@@ -7,7 +7,7 @@ document.getElementById("output").innerHTML = output;
 if this does not show up, and your expected result does not happen, then you
 have an issue bellow. --------------------------------------------------------*/
 
-
+output=["i hope these works"]
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
