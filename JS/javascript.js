@@ -6,8 +6,40 @@ document.getElementById("output").innerHTML = output;
 /*------------ preset output before we edit end should read "JavaScript Loading"
 if this does not show up, and your expected result does not happen, then you
 have an issue bellow. --------------------------------------------------------*/
-
-output=["i hope these works"]
+/* [“I”, “desire”, “to”, “be”, “a”, “sentence”] */
+/*var arrTwo = ["I", "desire", "to", "be", "a", "sentence."]
+output = arrTwo.join(' ');*/
+/*var strOne = "I really wish to be a array";
+output = strOne.split(" ");*/
+class Car{
+  constructor(type, color, year, milage){
+    this.type= type;
+    this.color = color;
+    this.year = year;
+    this.milage = milage;
+    this.on = false;
+  }
+  ignition(){
+    if(this.on == false)  {this.on = true}
+    else {this.on = false;}
+  }
+}
+class Truck extends Car{
+  constructor(type, color, year, milage){
+    super(type, color, year, milage, on);
+    this.bed = bed;
+  }
+}
+var iWantToEqualSeven = 7
+function soNotSeven() {
+  var iWantToEqualSeven = 12;
+  return iWantToEqualSeven;
+}
+var health = 100;
+function heal(health) {
+  if (health < 100) {health = 100;}
+  return health
+  }
 
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
