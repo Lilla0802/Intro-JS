@@ -11,6 +11,7 @@ have an issue bellow. --------------------------------------------------------*/
 output = arrTwo.join(' ');*/
 /*var strOne = "I really wish to be a array";
 output = strOne.split(" ");*/
+/*
 class Car{
   constructor(type, color, year, milage){
     this.type= type;
@@ -40,7 +41,19 @@ function heal(health) {
   if (health < 100) {health = 100;}
   return health
   }
-
+*/
+  var dilillaTriva = [
+   {statement: "Andy's mask is upside down.", value: true},
+   {statement:"Andy has blue hair ", value: false},
+   {statement: "These class is three periods", value:false},
+   {statement: "Aidan is tall", value: true},
+   {statement: "There's only one Aidan in class.", value: false},
+   {statement: "Jeter wears a Trump mask.", value:true },
+   {statement: "Andy doesn’t wear glasses", value:false},
+   {statement: "Andy wears a button up almost everyday.", value:true},
+   {statement: "Aidan is short.", value:false},
+   {statement: "Mr.LaMorie is short.", value:true},
+]
 /*----------------------------------------- Do not make changes below this line
 Output command for any changes above. If there are no changes above then it
 will read "JavaScript Loading". If there is a change above, then it will output
