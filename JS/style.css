@@ -13,39 +13,17 @@ a:link, a:visited {
         width: auto;
     }
 }
-.score{
-      margin-top: 1%;
-  margin-bottom: 1%;
-  white-space: nowrap;
-  color: white;
-  border-style: outset;
-  border-color: grey;
-  border-width: thick;
-background-color: rgb(100,76,195);
-padding: 10px 23px;
-  width: 40px;
-  height: 15px;
-font-size: 10px;
-transform: translate(0px,14px)
-
-}
 .true{
- transform: translate(330px, -40px)
+ transform: translate(330px, 10px);
+ background-color: rgb(63, 191, 63);
 }
 .false{
- transform: translate(-70px, -40px)
+ transform: translate(10px, -44px);
+ background-color: rgb(191, 63, 63);
 }
 .reset{
- transform: translate(167px, -35px)
-}
-.display{
-   background-color: rgb(220,220,220);
-   border-style: double;
-   border-color: black;
-  position: absolute;
-  top: 55%;
-  left: 45%;
-  transform: translate(-210px, -200px);
+ transform: translate(170px, -98px);
+ background-color: rgb(191, 191, 63);
 }
  .ultdiv{
    background-color: rgb(220,220,220);
@@ -56,7 +34,7 @@ transform: translate(0px,14px)
   left: 45%;
   transform: translate(-49%, -150px);
   width: 420px;
-  height: 130px;
+  height: 80px;
   -webkit-animation: box 6s infinite 0.5s;
   white-space: normal;
  }
@@ -67,7 +45,6 @@ transform: translate(0px,14px)
   color: white;
   border-style: outset;
   border-width: thick;
-background-color: rgb(100,76,195);
 padding: 10px 23px;
 }
 .ultdiv button:hover{
