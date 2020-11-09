@@ -41,8 +41,14 @@ function randomList(lists, length) { //function name with designated perameter
   var index = list.length;
   for (var i = 0; i < index; i++) {
     var randmtah = Math.floor(Math.random() * (list.length));
+    if (randmtah == previosRand && list.length > 1) {
+        while (randmtah == previosRand) {
+           randmtah = Math.floor(Math.random() * (list.length));
+         }
+    }
+    var previosRand = randmtah;
     var newList = list.splice(randmtah,1);
-    var state = lists[newList[0]]
+    var state = lists[newList[0]];
     splicedstuff.push(state);
   }
 
@@ -127,7 +133,7 @@ keys.addEventListener('click', e => {
       location.reload()
     }
     if (action === "true") {
-      if (stateArr[indexS].bool == true) {
+      if (stateArr[indexS].bool === true) {
         score += 5;
       }else{
         score -= 5;
@@ -142,7 +148,7 @@ keys.addEventListener('click', e => {
       }
     }
     if (action === "false") {
-      if (stateArr[indexS].bool===false) {
+      if (stateArr[indexS].bool === false) {
         score+=5;
       }
       else{
