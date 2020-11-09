@@ -1,6 +1,6 @@
 /*
- Memphis: 
-Aidan doesn’t take physics but acts like he does: T  
+ Memphis:
+Aidan doesn’t take physics but acts like he does: T
 Global warming is a lie: F
 Bethesda made the biggest flop in gaming history:T
 PC isn’t master race: F
@@ -11,6 +11,15 @@ Komoto best code editor:T
 Windows 10 is good:F
  Euan hates on Komoto because why not:T
  */
+const keys = document.querySelector('.ultdiv');
+var checkedBox = 0.0;
+
+const display = document.querySelector('.display');
+const scoreD = document.querySelector('.score');
+console.log(display.textContent)
+var dochandeler = document.getElementById("textbox");
+
+
 var myStatments = [{statement: "Aidan doesn't take physics but acts like he does", value: true},
                    {statement: "Global warming is a lie", value: false},
                    {statement: "Bethesda made the biggest flop in gaming history", value: true},
@@ -26,7 +35,7 @@ function randomList(lists, length) { //function name with designated perameter
   var itter = length;
   var list = [];
   for (var j = 0; j < itter; j ++ ) {
-           list.push(j);        
+           list.push(j);
   }
   var splicedstuff = [];
   var index = list.length;
@@ -36,7 +45,7 @@ function randomList(lists, length) { //function name with designated perameter
     var state = lists[newList[0]]
     splicedstuff.push(state);
   }
-  
+
 return splicedstuff;
 }
 
@@ -101,3 +110,54 @@ function makeComplex(list, maxLen = 5) {
   }
         return list;
 }
+var statements = randomList(myStatments, myStatments.length);
+var stateArr = makeComplex(statements);
+var indexS = 0;
+var score= 0;
+scoreD.textContent = "Score : " + score;
+display.textContent = stateArr[0].statement;
+keys.addEventListener('click', e => {
+  if (e.target.matches('button')) {
+    const key = e.target;
+    const action = key.dataset.action;
+    const keyContent = key.textContent;
+    const displayed = display.textContent;
+    //reset simply resets the page
+    if (action === "reset") {
+      location.reload()
+    }
+    if (action === "true") {
+      if (stateArr[indexS].bool == true) {
+        score += 5;
+      }else{
+        score -= 5;
+      }
+      indexS++;
+       display.textContent = stateArr[indexS].statement;
+      if(indexS == stateArr.length-1){
+        indexS = 0;
+        statements = randomList(myStatments, myStatments.length);
+        stateArr = makeComplex(statements);
+
+      }
+    }
+    if (action === "false") {
+      if (stateArr[indexS].bool===false) {
+        score+=5;
+      }
+      else{
+        score-=5;
+      }
+      indexS++;
+       display.textContent = stateArr[indexS].statement;
+             if(indexS == stateArr.length-1){
+        indexS = 0;
+        statements = randomList(myStatments, myStatments.length);
+        stateArr = makeComplex(statements);
+
+      }
+
+    }
+    scoreD.textContent = "Score : " + score;
+  }
+})

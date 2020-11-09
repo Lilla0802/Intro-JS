@@ -30,31 +30,35 @@ transform: translate(160px,14px)
 
 }
 .true{
- transform: translate(330px, -40px)
+ transform: translate(330px, -40px);
+ background-color: rgb(63, 191, 63);
 }
 .false{
- transform: translate(-70px, -40px)
+ transform: translate(-70px, -40px);
+ background-color: rgb(191, 63, 63);
 }
 .reset{
- transform: translate(167px, -35px)
+ transform: translate(167px, -35px);
+ background-color: rgb(191, 191, 63);s
 }
 .display{
    background-color: rgb(220,220,220);
    border-style: double;
    border-color: black;
-  position: absolute;
+  position:static;
   top: 55%;
   left: 45%;
-  transform: translate(-210px, -200px);
+  transform: translate(0, 75px);
+  font-size: 18px;
+  text-align: center;
 }
  .ultdiv{
-   background-color: rgb(220,220,220);
    border-style: double;
    border-color: black;
-  position: absolute;
+  position:absolute;
   top: 55%;
   left: 45%;
-  transform: translate(-49%, -150px);
+  transform: translate(-49%, 150px);
   width: 420px;
   height: 130px;
   -webkit-animation: box 6s infinite 0.5s;
@@ -67,7 +71,6 @@ transform: translate(160px,14px)
   color: white;
   border-style: outset;
   border-width: thick;
-background-color: rgb(100,76,195);
 padding: 10px 23px;
 }
 .ultdiv button:hover{
